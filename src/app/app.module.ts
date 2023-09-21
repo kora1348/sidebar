@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { CoreModule } from 'src/core/core.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -16,7 +16,8 @@ import { CoreModule } from 'src/core/core.module';
     BrowserModule,
     FormsModule,
     CommonModule,
-    CoreModule,
+    // CoreModule,
+    AppRoutingModule,
 
   ],
   providers: [],
