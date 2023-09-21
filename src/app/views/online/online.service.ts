@@ -12,7 +12,7 @@ export class OnlineService {
       type: "valeur_de_type" ,
       sub: [
         {
-          name: "Accueil",
+          name: "Home",
           state: "/account/home",
         }
       ]

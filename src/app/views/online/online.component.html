@@ -1,21 +1,25 @@
 <div class="container text-center" *ngIf="nav">
-
     <div class="sideBar">
-        <div class="menu-content">
-            <ul class="menu-items">
-                <li class="item" *ngFor="let menuItem of nav">
-                    <div class="menu-item">
-                        <span class="title">{{ menuItem.name }}</span>
-                    </div>
-                </li>
+      <div class="menu-content">
+        <ul class="menu-items">
+          <li class="item" *ngFor="let menuItem of nav; let i = index">
+            <div class="menu-item" (click)="toggleSubMenu(i)">
+              <span class="title">{{ menuItem.name }}</span>
+            </div>
+            <ul class="submenu" *ngIf="menuItem.active">
+              <li class="subitem" *ngFor="let subItem of menuItem.sub">
+                <div class="submenu-item">
+                  <span class="sub-title">{{ subItem.name }}</span>
+                </div>
+              </li>
             </ul>
-        </div>
+          </li>
+        </ul>
+      </div>
     </div>
-
-
-</div>
-
-<!-- <app-header></app-header> -->
-<div class="container">
+  </div>
+  
+  <div class="container">
     <router-outlet></router-outlet>
-</div>
+  </div>
+  
