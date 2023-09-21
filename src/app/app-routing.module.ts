@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
 
-import { TodoComponent } from './todo/todo.component';
+
 
 const routes: Routes = [
-  
+  {
+    path: '',
+    loadChildren: () => import('./views/online/online.module').then((m) => m.OnlineModule),
+  },
 
-  { path: '',   redirectTo: '/todo', pathMatch: 'full' },
-  { path : 'header', component : HeaderComponent },
-  { path : 'todo', component : TodoComponent },
+ 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

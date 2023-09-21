@@ -1,0 +1,16 @@
+<div class="container text-center" *ngIf="nav">
+
+    <div class="sideBar">
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li class="item" *ngFor="let menuItem of nav">
+                    <div class="menu-item">
+                        <span class="title">{{ menuItem.name }}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>

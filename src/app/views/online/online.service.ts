@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { IMenuItem } from './types/navigation';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class TodoService {
+export class OnlineService {
 
   IMenuItem: IMenuItem[] = [
     {
@@ -29,9 +29,6 @@ export class TodoService {
     },
   ];
   
-    
 
-   
-
-  constructor() {}
+  constructor() { }
 }
