@@ -9,7 +9,8 @@
             <ul class="submenu" *ngIf="menuItem.active">
               <li class="subitem" *ngFor="let subItem of menuItem.sub">
                 <div class="submenu-item">
-                  <span class="sub-title">{{ subItem.name }}</span>
+                  <!-- Ajoutez la directive [routerLink] pour gérer la navigation -->
+                  <a [routerLink]="subItem.state">{{ subItem.name }}</a>
                 </div>
               </li>
             </ul>
