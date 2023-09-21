@@ -12,16 +12,16 @@ const ONLINE_ROUTES: Routes = [
     children: [
       {
           path: '',
-          redirectTo: 'administrations',
+          redirectTo: 'account',
           pathMatch: 'full'
       },
-      // {
-      //   path: 'administrations',
-      //   loadChildren: () =>
-      //     import('./views/administrations/administrations.module').then(
-      //       (m) => m.AdministrationsModule
-      //     ),
-      // },
+      {
+        path: 'account',
+        loadChildren: () =>
+          import('./views/account/account.module').then(
+            (m) => m.AccountModule
+          ),
+      },
      
     ],
   },
