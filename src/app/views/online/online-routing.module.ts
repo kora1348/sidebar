@@ -22,6 +22,13 @@ const ONLINE_ROUTES: Routes = [
             (m) => m.AccountModule
           ),
       },
+      {
+        path: 'agences',
+        loadChildren: () =>
+          import('./views/agences/agences.module').then(
+            (m) => m.AgencesModule
+          ),
+      },
      
     ],
   },
