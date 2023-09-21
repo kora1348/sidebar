@@ -4,12 +4,13 @@
         <ul class="menu-items">
           <li class="item" *ngFor="let menuItem of nav; let i = index">
             <div class="menu-item" (click)="toggleSubMenu(i)">
+              <!-- Display the menu item name -->
               <span class="title">{{ menuItem.name }}</span>
             </div>
             <ul class="submenu" *ngIf="menuItem.active">
               <li class="subitem" *ngFor="let subItem of menuItem.sub">
                 <div class="submenu-item">
-                  <!-- Ajoutez la directive [routerLink] pour gérer la navigation -->
+                  <!-- Add [routerLink] directive to manage navigation -->
                   <a [routerLink]="subItem.state">{{ subItem.name }}</a>
                 </div>
               </li>
@@ -21,6 +22,7 @@
   </div>
   
   <div class="container">
+    <!-- This is where the routed components will be displayed -->
     <router-outlet></router-outlet>
   </div>
   

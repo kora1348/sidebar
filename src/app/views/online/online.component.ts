@@ -13,14 +13,15 @@ export class OnlineComponent implements OnInit {
   constructor(private onlineService: OnlineService) { }
 
   ngOnInit() {
+    // Initialize the 'nav' property with data from the 'onlineService'
     this.nav = this.onlineService.IMenuItem;
   }
 
   toggleSubMenu(index: number) {
-    // Basculez l'état actif de l'élément cliqué
+    // Toggle the active state of the clicked item
     this.nav[index].active = !this.nav[index].active;
 
-    // Assurez-vous que tous les autres éléments sont désactivés
+    // Ensure that all other items are deactivated
     for (let i = 0; i < this.nav.length; i++) {
       if (i !== index) {
         this.nav[i].active = false;
