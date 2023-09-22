@@ -101,3 +101,23 @@
     width: 100%;
     top: 0;
 }
+
+.show-menu {
+    /* Appliquer la hauteur, l'opacité et la visibilité lors de l'affichage */
+    display: flex;
+    }
+    
+    .noshow-menu {
+    /* Appliquer la hauteur, l'opacité et la visibilité lors du masquage */
+    display: none;
+    }
+    
+    .show-elem {
+    /* Appliquer la hauteur, l'opacité et la visibilité lors de l'affichage */
+    display: flex;
+    }
+    
+    .noshow-elem {
+    /* Appliquer la hauteur, l'opacité et la visibilité lors du masquage */
+    display: none;
+    }
