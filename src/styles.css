@@ -1,103 +1,119 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .sideBar {
-    position: fixed;
-    height: 100%;
-    width: 230px;
-    background: #360a96;
-    left: 0;
-}
+  position: fixed;
+  height: 100%;
+  width: 230px;
+  background: #360a96;
+  left: 0;
+  }
+  
+  .sideBar a {
+  color: #fff;
+  text-decoration: none;
+  }
+  
+  .menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
+  }
+  
+  .menu-items,
+  .menu-title {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  color: #fff;
+  list-style: none;
+  }
+  
+  .menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  }
+  
+  .submenu-title {
+  color: #fff;
+  list-style: none;
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  border-bottom: #fff;
+  
+  .title-sub {
+  display: inline-block;
+  padding: 8px;
+  
+  }
+  
+  .items {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 12px;
+  
+  }
+  }
+  
+  .items:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .item,
+  .menu-item,
+  .title {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  }
+  
+  .item a:hover,
+  .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .submenu {
+  right: calc(-100% - 26px);
+  background: #360a96;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  
+  }
+  
+  .show-menu {
+  /* Appliquer la hauteur, l'opacité et la visibilité lors de l'affichage */
+  display: flex;
+  }
+  
+  .noshow-menu {
+  /* Appliquer la hauteur, l'opacité et la visibilité lors du masquage */
+  display: none;
+  }
+  
+  .show-elem {
+  /* Appliquer la hauteur, l'opacité et la visibilité lors de l'affichage */
+  display: flex;
+  }
+  
+  .noshow-elem {
+  /* Appliquer la hauteur, l'opacité et la visibilité lors du masquage */
+  display: none;
+  }
 
-.sideBar a {
-    color: #fff;
-    text-decoration: none;
-}
 
-.menu-content {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin-top: 0px;
-}
-
-.menu-items,
-.menu-title {
-    padding: 16px;
-    display: inline-block;
-    width: 100%;
-    border-radius: 12px;
-    color: #fff;
-    list-style: none;
-}
-
-.menu-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    cursor: pointer;
-}
-
-
-/* .submenu-title */
-
-.submenu-title {
-    color: #fff;
-    list-style: none;
-    padding: 16px;
-    display: inline-block;
-    width: 100%;
-    border-radius: 12px;
-    border-bottom: #fff;
-}
-
-.submenu-title .title-sub {
-    display: inline-block;
-    padding: 8px;
-}
-
-.submenu-title .items {
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-radius: 12px;
-    cursor: pointer;
-    margin-top: 12px;
-}
-
-.submenu-title .items:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-
-/* .item, .menu-item, .title */
-
-.item,
-.menu-item,
-.title {
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-.item a:hover,
-.menu-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-
-/* .submenu */
-
-.submenu {
-    right: calc(-100% - 26px);
-    background: #960A22;
-    height: 100%;
-    width: 100%;
-    top: 0;
-}

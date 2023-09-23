@@ -1,28 +1,35 @@
 <div class="container text-center" *ngIf="nav">
     <div class="sideBar">
-      <div class="menu-content">
+      <div class="menu-content" [ngClass]="{ 'show-elem': !showElement, 'noshow-elem': showElement }">
         <ul class="menu-items">
-          <li class="item" *ngFor="let menuItem of nav; let i = index">
-            <div class="menu-item" (click)="toggleSubMenu(i)">
-              <!-- Display the menu item name -->
-              <span class="title">{{ menuItem.name }}</span>
-            </div>
-            <ul class="submenu" *ngIf="menuItem.active">
-              <li class="subitem" *ngFor="let subItem of menuItem.sub">
-                <div class="submenu-item">
-                  <!-- Add [routerLink] directive to manage navigation -->
-                  <a [routerLink]="subItem.state">{{ subItem.name }}</a>
-                </div>
-              </li>
-            </ul>
-          </li>
+           <li class="item" [ngClass]="{ active: item.active }" *ngFor="let item of nav">
+           <div class="menu-item" [ngClass]="{ 'show-menu': showMenu, 'noshow-menu': !showMenu }">
+              <span class="title" (click)="onClickChangeActiveFlag(item)">
+                 <span>{{ item.name }}</span>
+                 <!-- <fa-icon [icon]="faChevronRight"></fa-icon> -->
+              </span>
+           </div>
+           </li>
         </ul>
-      </div>
+     </div>
+     <div [ngClass]="{ 'show-elem': showElement, 'noshow-elem': !showElement }">
+      <ul class="submenu-title">
+         <span class="title-sub" (click)="closeChildNav()">
+            <!-- <fa-icon [icon]="faChevronLeft"></fa-icon> -->
+            <span class="ml-2 btnBack">Back</span>
+         </span>
+         <li class="items" routerLink="{{ subItem.state }}" *ngFor="let subItem of subMenu">
+            <span>{{subItem.name}}</span>
+         </li>
+      </ul>
+   </div>
     </div>
-  </div>
+</div>
   
   <div class="container">
     <!-- This is where the routed components will be displayed -->
     <router-outlet></router-outlet>
   </div>
+  
+
   
