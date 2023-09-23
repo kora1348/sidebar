@@ -26,6 +26,10 @@ export class OnlineComponent implements OnInit {
     this.showMenu = true;
     this.showSideBar = true;
 
+    if (localStorage.getItem('submenu')) {
+      const item: string = localStorage.getItem('submenu') || "";
+      this.setActiveMainItem(JSON.parse(item))
+    }
   }
 
   selectItem(item: IMenuItem) {
@@ -47,6 +51,7 @@ export class OnlineComponent implements OnInit {
     // this.navService.sidebarState.childnavOpen = false;
     this.showElement = false;
     this.showMenu = true;
+    localStorage.setItem('submenu', "");
 }
 
 setActiveMainItem(item: IMenuItem) {
@@ -64,7 +69,8 @@ setActiveMainItem(item: IMenuItem) {
 }
 
 onClickChangeActiveFlag(item: IMenuItem) {
-    this.setActiveMainItem(item);
+  localStorage.setItem('submenu', JSON.stringify(item));
+  this.setActiveMainItem(item);
 }
 
   
