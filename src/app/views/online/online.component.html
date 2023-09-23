@@ -16,7 +16,7 @@
       <ul class="submenu-title">
          <span class="title-sub" (click)="closeChildNav()">
             <!-- <fa-icon [icon]="faChevronLeft"></fa-icon> -->
-            <span class="ml-2 btnBack">Back</span>
+            <div class="items">Back</div>
          </span>
          <li class="items" routerLink="{{ subItem.state }}" *ngFor="let subItem of subMenu">
             <span>{{subItem.name}}</span>
